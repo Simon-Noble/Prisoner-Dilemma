@@ -17,13 +17,14 @@ def main():
 
     matrix = BasicReward()
 
-    rounds = 100
+    rounds = 200
 
     simulator = RewardSimulator(strategies,matrix,rounds)
 
     results = simulator.run()
 
-    print(results)
+    for result in results:
+        print(result)
 
 
 if __name__ == '__main__':
