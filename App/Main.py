@@ -19,10 +19,12 @@ def main():
 
     rounds = 100
 
-    simulator  = RewardSimulator(strategies,matrix,rounds)
+    simulator = RewardSimulator(strategies,matrix,rounds)
 
-    results  = simulator.run()
-    print(len(results))
+    results = simulator.run()
+
+    sorted_results = [(k, results[k]) for k in sorted(results, key=results.get, reverse=True)]
+    print(sorted_results)
 
 
 if __name__ == '__main__':
