@@ -2,7 +2,7 @@ from App.Strategies.StrategyInterface import StrategyInterface
 
 
 class TitForTwoTats(StrategyInterface):
-    def execute(self, opponenets_moves: list[bool], own_moves: list[bool]) -> bool:
+    def execute(self, opponents_moves: list[bool], own_moves: list[bool]) -> bool:
         """
         If the opponent has betrayed in the last 2 moves, betray.
 
@@ -10,9 +10,9 @@ class TitForTwoTats(StrategyInterface):
 
         Returning True means not betraying.
         """
-        if len(opponenets_moves) < 2:
+        if len(opponents_moves) < 2:
             return True
-        return opponenets_moves[-1] and opponenets_moves[-2]
+        return opponents_moves[-1] and opponents_moves[-2]
 
     def __repr__(self):
         return "TitForTwoTats"

@@ -4,7 +4,7 @@ from App.Strategies.StrategyInterface import StrategyInterface
 
 
 class TwoThirdsBetray(StrategyInterface):
-    def execute(self, opponenets_moves: list[bool], own_moves: list[bool]) -> bool:
+    def execute(self, opponents_moves: list[bool], own_moves: list[bool]) -> bool:
         """
         2/3 Times betray, 1/3 times cooperate.
 

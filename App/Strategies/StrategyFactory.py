@@ -1,9 +1,12 @@
 from App.Strategies.StrategyImplementations.AllwaysBetray import AllwaysBetray
 from App.Strategies.StrategyImplementations.AllwaysCooperate import AllwaysCooperate
+from App.Strategies.StrategyImplementations.AverageOfOpponent import AverageOfOpponent
 from App.Strategies.StrategyImplementations.DistrustingTitForTat import DistrustingTitForTat
 from App.Strategies.StrategyImplementations.Exploiter import Exploiter
 from App.Strategies.StrategyImplementations.Random import Random
 from App.Strategies.StrategyImplementations.ReverseTitForTat import ReverseTitForTat
+from App.Strategies.StrategyImplementations.SlightlyLessVindictive import SlightlyLessVindictive
+from App.Strategies.StrategyImplementations.ThreeQuartersCooperate import ThreeQuartersCooperate
 from App.Strategies.StrategyInterface import StrategyInterface
 from App.Strategies.StrategyImplementations.TitForTat import TitForTat
 from App.Strategies.StrategyImplementations.TitForTwoTats import TitForTwoTats
@@ -37,5 +40,8 @@ class StrategyFactory:
         strategies.append(TwoThirdsCooperate())
         strategies.append(Vindictive())
         strategies.append(Exploiter())
+        strategies.append(ThreeQuartersCooperate())
+        strategies.append(SlightlyLessVindictive())
+        strategies.append(AverageOfOpponent())
 
         return strategies

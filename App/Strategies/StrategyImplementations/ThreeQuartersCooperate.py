@@ -1,17 +1,17 @@
+import random
+
 from App.Strategies.StrategyInterface import StrategyInterface
 
 
-class TitForTat(StrategyInterface):
+class ThreeQuartersCooperate(StrategyInterface):
+
     def execute(self, opponents_moves: list[bool], own_moves: list[bool]) -> bool:
         """
-        Don't betray unless the opponent has betrayed.
-        Forgive if forgiven
+        3/4 Chance of cooperating, 1/4 chance of betraying
 
         Returning True means not betraying.
         """
-        if len(opponents_moves) == 0:
-            return True
-        return opponents_moves[-1]
+        return random.choice([True, True, True, False])
 
     def __repr__(self):
-        return "TitForTat"
+        return "ThreeQuartersCooperate"
