@@ -10,3 +10,6 @@ class AllwaysBetray(StrategyInterface):
         Returning True means not betraying.
         """
         return False
+
+    def __repr__(self):
+        return "AllwaysBetray"

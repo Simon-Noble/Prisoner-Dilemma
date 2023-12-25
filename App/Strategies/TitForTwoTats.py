@@ -13,3 +13,6 @@ class TitForTwoTats(StrategyInterface):
         if len(opponenets_moves) < 2:
             return True
         return opponenets_moves[-1] and opponenets_moves[-2]
+
+    def __repr__(self):
+        return "TitForTwoTats"

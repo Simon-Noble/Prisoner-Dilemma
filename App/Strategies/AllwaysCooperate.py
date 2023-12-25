@@ -10,3 +10,6 @@ class AllwaysCooperate(StrategyInterface):
         Returning True means not betraying.
         """
         return True
+
+    def __repr__(self):
+        return "AllwaysCooperate"

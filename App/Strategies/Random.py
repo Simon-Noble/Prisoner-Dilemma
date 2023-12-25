@@ -12,3 +12,6 @@ class Random(StrategyInterface):
             Returning True means not betraying.
             """
             return random.choice([True, False])
+
+        def __repr__(self):
+            return "Random"

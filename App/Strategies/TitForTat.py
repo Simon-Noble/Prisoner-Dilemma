@@ -12,3 +12,6 @@ class TitForTat(StrategyInterface):
         if len(opponenets_moves) == 0:
             return True
         return opponenets_moves[-1]
+
+    def __repr__(self):
+        return "TitForTat"
