@@ -1,4 +1,4 @@
-from MatrixInterface import MatrixInterface
+from App.RewardMatricies.MatrixInterface import MatrixInterface
 
 class BasicReward(MatrixInterface):
 
