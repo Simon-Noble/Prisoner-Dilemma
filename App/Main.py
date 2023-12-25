@@ -23,8 +23,7 @@ def main():
 
     results = simulator.run()
 
-    sorted_results = [(k, results[k]) for k in sorted(results, key=results.get, reverse=True)]
-    print(sorted_results)
+    print(results)
 
 
 if __name__ == '__main__':

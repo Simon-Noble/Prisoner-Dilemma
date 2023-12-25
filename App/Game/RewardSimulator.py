@@ -30,7 +30,8 @@ class RewardSimulator:
                 results = Dilemma.run(self.matrix, matchup, moves)
                 scores[matchup[0]] += results[0]
                 scores[matchup[1]] += results[1]
-        return scores
+        sorted_scores = [(k, scores[k]) for k in sorted(scores, key=scores.get, reverse=True)]
+        return sorted_scores
 
     def get_matchups(self):
         all_matchups = []
